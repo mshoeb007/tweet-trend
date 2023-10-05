@@ -4,7 +4,7 @@ def version   = '2.1.4'
 pipeline {
     agent {
         node {
-            label 'SlaveMachine'
+            label 'JenkinsSlave'
         }
     }
 environment {
