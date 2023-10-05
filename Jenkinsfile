@@ -18,5 +18,16 @@ environment {
                  echo "----------- build complted ----------"
             }
         }
+    stage{
+        environment{
+            scannerHome = tool 'md-sonar-scanner'
+        }
+        steps{
+            withSonarQubeEnv('md-sonarqube-server'){
+                sh '${scannerHome}/bin/sonar-scanner'
+            }
+        }
+    }
 }
+    
 }
