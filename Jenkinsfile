@@ -18,7 +18,7 @@ environment {
                  echo "----------- build complted ----------"
             }
         }
-    stage{
+    stage('SonarQube Test'){
         environment{
             scannerHome = tool 'md-sonar-scanner'
         }
